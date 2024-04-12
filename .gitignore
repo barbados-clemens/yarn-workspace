@@ -33,6 +33,14 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+# yarn non-zero installs: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # System Files
 .DS_Store
