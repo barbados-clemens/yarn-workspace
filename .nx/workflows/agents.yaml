@@ -1,14 +1,14 @@
 launch-templates:
   linux-medium-js:
     resource-class: 'docker_linux_amd64/medium'
-    image: 'ubuntu22.04-node20.11-v5'
+    image: 'ubuntu22.04-node20.11-v3'
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
       - name: Enable Corepack
         script: |
           yarn --version
-          sudo corepack enable
+          yarn set version stable
           yarn --version
       - name: Restore Node Modules Cache
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/cache/main.yaml'
