@@ -5,11 +5,6 @@ launch-templates:
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
-      - name: Enable Corepack
-        script: |
-          yarn --version
-          yarn set version stable
-          yarn --version
       - name: Restore Node Modules Cache
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/cache/main.yaml'
         env:
