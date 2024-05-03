@@ -1,6 +1,0 @@
-name: 'My Custom Step'
-description: 'this step does really cool stuff'
-definition:
-  using: 'node'
-  main: '.nx/workflows/test.js'
-  post: '.nx/workflows/test.js'
