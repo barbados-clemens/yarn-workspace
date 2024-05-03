@@ -5,7 +5,7 @@ launch-templates:
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
-      - uses: './nx/workflows/custom-step.yaml'
+      - uses: 'file://.nx/workflows/custom-step.yaml'
       - name: Restore Node Modules Cache
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/cache/main.yaml'
         env:
