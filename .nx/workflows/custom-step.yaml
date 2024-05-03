@@ -1,0 +1,8 @@
+name: 'My Custom Step'
+description: 'this step does really cool stuff'
+definition:
+  using: 'node'
+  main:
+    script: |
+      echo "hello there"
+      echo node -v
