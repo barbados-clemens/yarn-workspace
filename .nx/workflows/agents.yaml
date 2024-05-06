@@ -24,7 +24,7 @@ launch-templates:
         # https://raw.githubusercontent.com/nrwl/nx-cloud-workflows/feat/APP-1520-node-js-step/workflow-steps/install-node/main.yaml
         uses: 'nrwl/nx-cloud-workflows/node-js-step-testing/workflow-steps/install-node/main.yaml'
         env:
-          VERSION: '22'
+          NX_CLOUD_NODE_VERSION: '22'
       - name: Print Node Version
         script: |
           node -v
