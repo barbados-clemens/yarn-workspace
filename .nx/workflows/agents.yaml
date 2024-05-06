@@ -5,18 +5,26 @@ launch-templates:
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
-      - name: Install Node
+      # - name: Install Node
+      #   script: |
+      #     node -v
+      #     # run nvm install script
+      #     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+      #     # source the updated profile to get the nvm command available
+      #     source ~/.profile
+      #     # install the needed version of node via nvm
+      #     nvm install 21.7.3
+      #     # echo the current path (which now includes the nvm-provided version of node) to NX_CLOUD_ENV
+      #     echo "PATH=$PATH" >> $NX_CLOUD_ENV
+      #     node -v
+      - name: Print Node Version
         script: |
           node -v
-          # run nvm install script
-          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-          # source the updated profile to get the nvm command available
-          source ~/.profile
-          # install the needed version of node via nvm
-          nvm install 21.7.3
-          # echo the current path (which now includes the nvm-provided version of node) to NX_CLOUD_ENV
-          echo "PATH=$PATH" >> $NX_CLOUD_ENV
-          node -v
+      - name: Install node v22
+        # https://raw.githubusercontent.com/nrwl/nx-cloud-workflows/feat/APP-1520-node-js-step/workflow-steps/install-node/main.yaml
+        uses: 'nrwl/nx-cloud-workflows/feat/APP-1520-node-js-step//workflow-steps/install-node/main.yaml'
+        env:
+          VERSION: '22'
       - name: Print Node Version
         script: |
           node -v
