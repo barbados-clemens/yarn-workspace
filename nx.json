@@ -22,18 +22,8 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    }
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } }
   ],
   "generators": {
     "@nx/react": {
@@ -43,16 +33,11 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint"
-      }
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "eslint" }
     }
   },
-  "nxCloudAccessToken": "NDQwZWJjNGMtZmNlOC00MDcwLWJhZTctNmI0YzNmNTE1NjhmfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "M2E0NGE3OTktYzZjOC00YjMxLThhNmQtMjg4YmViMTJkZDZkfHJlYWQtd3JpdGU=",
   "nxCloudUrl": "https://staging.nx.app",
   "bust": 3
 }
